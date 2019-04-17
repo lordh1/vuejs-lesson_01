@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/form">Form</router-link> |
       <router-link to="/views">Views</router-link> |
-      <router-link to="/components">Components</router-link>
+      <router-link to="/components">Components</router-link> |
+      <router-link to="/loops">Loops</router-link>
     </div>
     <router-view/>
   </div>

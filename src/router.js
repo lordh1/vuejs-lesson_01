@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Form from './components/Form/Form.vue'
 import Components from './components/Components/Components.vue'
+import Loops from './components/Loops/Loops.vue'
 
 Vue.use(Router)
 
@@ -32,6 +33,12 @@ export default new Router({
       path: '/components',
       name: 'components',
       component: Components
+    },
+    {
+      path: '/loops',
+      name: 'loops',
+      component: Loops
     }
+
   ]
 })
