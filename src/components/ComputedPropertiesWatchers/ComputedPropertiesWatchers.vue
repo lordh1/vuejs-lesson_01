@@ -47,6 +47,7 @@ export default {
     alertMessage() {
       if(this.submited) return "Message is submitted...";
       else if(this.inputMessage) return "Please submit your message. Current counter value is: " + this.counter;
+      else return "";
     }
   },
   watch: {
