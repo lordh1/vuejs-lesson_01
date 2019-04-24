@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Form from './components/Form/Form.vue'
 import Components from './components/Components/Components.vue'
+import ComputedPropertiesWatchers from './components/ComputedPropertiesWatchers/ComputedPropertiesWatchers'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/components',
       name: 'components',
       component: Components
+    },
+    {
+      path: '/computed_properties_watchers',
+      name: 'computed_properties_watchers',
+      component: ComputedPropertiesWatchers
     }
   ]
 })
