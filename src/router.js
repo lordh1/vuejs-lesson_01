@@ -4,8 +4,9 @@ import Home from './views/Home.vue'
 import Form from './components/Form/Form.vue'
 import Components from './components/Components/Components.vue'
 import Loops from './components/Loops/Loops.vue'
+import Functions from './components/Functions/Functions'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -38,6 +39,11 @@ export default new Router({
       path: '/loops',
       name: 'loops',
       component: Loops
+    },
+    {
+      path: '/functions',
+      name: 'functions',
+      component: Functions
     }
 
   ]
