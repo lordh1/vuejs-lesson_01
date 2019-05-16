@@ -4,8 +4,9 @@ import Home from './views/Home.vue'
 import Form from './components/Form/Form.vue'
 import Components from './components/Components/Components.vue'
 import ComputedPropertiesWatchers from './components/ComputedPropertiesWatchers/ComputedPropertiesWatchers'
+import Vuex from './components/Vuex/Vuex'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -38,6 +39,11 @@ export default new Router({
       path: '/computed_properties_watchers',
       name: 'computed_properties_watchers',
       component: ComputedPropertiesWatchers
+    },
+    {
+      path: '/vuex',
+      name: 'vuex',
+      component: Vuex
     }
   ]
 })

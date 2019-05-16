@@ -5,7 +5,8 @@
       <router-link to="/form">Form</router-link> |
       <router-link to="/views">Views</router-link> |
       <router-link to="/components">Components</router-link> |
-      <router-link to="/computed_properties_watchers">Computed Properties & Watchers</router-link>
+      <router-link to="/computed_properties_watchers">Computed Properties & Watchers</router-link> |
+      <router-link to="/vuex">Vuex</router-link>
     </div>
     <router-view/>
   </div>
