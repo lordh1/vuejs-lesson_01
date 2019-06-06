@@ -1,10 +1,16 @@
 <template>
   <div>
+    <div v-show="loader" class="cover">
+      <button @click="setLoader(false)">Close</button>
+    </div>
     <h1>Vuex</h1>
     <p><strong>Loader state:</strong> {{loader}}</p>
     <p><button @click="setLoader(true)">set loaded</button></p>
     <p><button @click="setLoader(false)">set not loaded</button></p>
     <p><button @click="apiGetCars">getCars</button></p>
+
+    <h1>Cars</h1>
+    <p v-for="(item, index) in cars" :key='index'>{{item.model}}</p>
   </div>
 </template>
 
@@ -22,7 +28,7 @@ export default {
     ...mapMutations('global', [
       'setLoader'
     ]),
-    ...mapActions('global', [
+    ...mapActions('vuex', [
       'apiGetCars'
     ])
   },
@@ -32,6 +38,9 @@ export default {
     ...mapState({
       loader: state => state.global.loader
     }),
+    ...mapState({
+      cars: state => state.vuex.cars
+    }),
     ...mapGetters('global', [
       'getLoader'
     ])
@@ -40,6 +49,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.cover {
+  position: fixed;
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 h3 {
   margin: 40px 0 0;
 }
